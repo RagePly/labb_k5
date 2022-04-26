@@ -5,7 +5,7 @@ def fitpeak(minpoint, maxpoint, X, Y):
     xi = X[Range]
     yi = Y[Range]
     l = np.polyfit(xi, np.log(yi), 2)
-    [la, lb, lc] = l
+    [lc, lb, la] = l
 
     lx0= -lb / (2 * lc)
     lo= la - lc * lx0**2;
