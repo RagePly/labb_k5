@@ -27,6 +27,7 @@ es = np.array([
 
 ch = data[:, 0]
 e = m*ch + c
+print(m, c)
 
 E_min, E_max = 0.913, 0.947
 E1_peak, E1_fit, E1_fitrange = fitpeak(E_min, E_max, e, data[:, 1])
@@ -52,5 +53,7 @@ ax_calib.text(Q, 250, 'Q = %4.2f MeV' % Q, ha='center')
 ax_calib.set_xlabel('Energy (MeV)')
 ax_calib.set_ylabel('Counts')
 ax_calib.set_title('Calibrated Spectrum and E1 peak')
+
+fig.suptitle('$^{10+21}$St Calibration')
 plt.show()
 
